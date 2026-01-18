@@ -1,1 +1,212 @@
-credom.it
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREDOM - Technology Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 30px 0;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #4f9cff;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 0 80px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #4f9cff, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #b0b0b0;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 60px 0 100px;
+        }
+
+        .projects h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 50px;
+            color: #e0e0e0;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card.handrix {
+            border-top: 3px solid #4f9cff;
+        }
+
+        .project-card.vital-balance {
+            border-top: 3px solid #10b981;
+        }
+
+        .project-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .project-card.handrix h3 {
+            color: #4f9cff;
+        }
+
+        .project-card.vital-balance h3 {
+            color: #10b981;
+        }
+
+        .project-card p {
+            color: #a0a0a0;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .project-card .tag {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .project-card.handrix .tag {
+            background: rgba(79, 156, 255, 0.15);
+            color: #4f9cff;
+        }
+
+        .project-card.vital-balance .tag {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer p {
+            color: #606060;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .project-card {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">CREDOM<span>.IT</span></div>
+        </header>
+
+        <section class="hero">
+            <h1>Building Tomorrow's Technology</h1>
+            <p>CREDOM is a technology company dedicated to creating innovative solutions that empower people and businesses to achieve more.</p>
+        </section>
+
+        <section class="projects">
+            <h2>Our Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card handrix">
+                    <h3>Handrix</h3>
+                    <p>A powerful platform designed to streamline workflows and enhance productivity. Handrix brings together cutting-edge technology to help teams collaborate more effectively.</p>
+                    <div class="tags">
+                        <span class="tag">Innovation</span>
+                        <span class="tag">Productivity</span>
+                        <span class="tag">Collaboration</span>
+                    </div>
+                </div>
+
+                <div class="project-card vital-balance">
+                    <h3>Vital Balance</h3>
+                    <p>Technology meets wellness. Vital Balance is our initiative focused on health and well-being, providing tools and insights to help people live healthier, more balanced lives.</p>
+                    <div class="tags">
+                        <span class="tag">Health</span>
+                        <span class="tag">Wellness</span>
+                        <span class="tag">Balance</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 CREDOM. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
