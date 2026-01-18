@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital Balance - Health & Wellness Technology | CREDOM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #0d1f1a 50%, #0a1612 100%);
+            min-height: 100vh;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #10b981;
+        }
+
+        .back-link {
+            color: #10b981;
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 0 60px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 30px;
+            color: #10b981;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #10b981, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #b0b0b0;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 50px;
+            color: #e0e0e0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 35px;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(16, 185, 129, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .feature-card p {
+            color: #909090;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .mission-box {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.02) 100%);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 20px;
+            padding: 60px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .mission h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #10b981;
+        }
+
+        .mission p {
+            font-size: 1.15rem;
+            color: #a0a0a0;
+            line-height: 1.8;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            color: #10b981;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            color: #808080;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer p {
+            color: #606060;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #10b981;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .mission-box {
+                padding: 40px 25px;
+            }
+
+            .stat-item h3 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="logo">CREDOM<span>.IT</span></a>
+            <a href="index.html" class="back-link">
+                <span>&larr;</span> Back to Home
+            </a>
+        </header>
+
+        <section class="hero">
+            <span class="hero-badge">A CREDOM Project</span>
+            <h1>Vital Balance</h1>
+            <p>Where technology meets wellness. We're building tools and solutions that help people understand, track, and improve their health for a more balanced life.</p>
+        </section>
+
+        <section class="features">
+            <h2>What We Offer</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">&#9829;</div>
+                    <h3>Health Tracking</h3>
+                    <p>Comprehensive monitoring of vital health metrics with intuitive dashboards and personalized insights.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">&#9733;</div>
+                    <h3>Wellness Insights</h3>
+                    <p>AI-powered analysis that transforms your health data into actionable recommendations.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">&#8635;</div>
+                    <h3>Daily Balance</h3>
+                    <p>Tools to help you maintain equilibrium between work, rest, nutrition, and physical activity.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">&#9041;</div>
+                    <h3>Progress Goals</h3>
+                    <p>Set meaningful health objectives and track your journey with milestone celebrations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission">
+            <div class="mission-box">
+                <h2>Our Mission</h2>
+                <p>We believe that everyone deserves access to tools that help them live healthier lives. Vital Balance combines cutting-edge technology with evidence-based health science to create solutions that are both powerful and accessible. Our goal is to empower individuals to take control of their well-being through data-driven insights and personalized guidance.</p>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Continuous Monitoring</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100+</h3>
+                    <p>Health Metrics</p>
+                </div>
+                <div class="stat-item">
+                    <h3>360°</h3>
+                    <p>Holistic Approach</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p><a href="vital-balance-policy.html">Privacy Policy</a></p>
+            <p>&copy; 2026 <a href="index.html">CREDOM</a>. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

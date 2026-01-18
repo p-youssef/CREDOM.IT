@@ -140,6 +140,31 @@
             color: #10b981;
         }
 
+        .project-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .project-link:hover {
+            opacity: 0.9;
+            transform: translateX(5px);
+        }
+
+        .project-card.handrix .project-link {
+            background: rgba(79, 156, 255, 0.15);
+            color: #4f9cff;
+        }
+
+        .project-card.vital-balance .project-link {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -190,6 +215,7 @@
                         <span class="tag">Productivity</span>
                         <span class="tag">Collaboration</span>
                     </div>
+                    <a href="#" class="project-link">Coming Soon &rarr;</a>
                 </div>
 
                 <div class="project-card vital-balance">
@@ -200,6 +226,7 @@
                         <span class="tag">Wellness</span>
                         <span class="tag">Balance</span>
                     </div>
+                    <a href="vital-balance.html" class="project-link">Learn More &rarr;</a>
                 </div>
             </div>
         </section>
