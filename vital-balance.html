@@ -197,6 +197,122 @@
             font-size: 0.95rem;
         }
 
+        /* Resources Section */
+        .resources {
+            padding: 80px 0;
+        }
+
+        .resources h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+
+        .resources .section-desc {
+            text-align: center;
+            color: #808080;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .resource-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .resource-card .resource-type {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .resource-card .resource-type.experiment {
+            background: rgba(168, 85, 247, 0.15);
+            color: #a855f7;
+        }
+
+        .resource-card .resource-type.resource {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+        }
+
+        .resource-card .resource-type.article {
+            background: rgba(59, 130, 246, 0.15);
+            color: #3b82f6;
+        }
+
+        .resource-card .resource-type.research {
+            background: rgba(251, 191, 36, 0.15);
+            color: #fbbf24;
+        }
+
+        .resource-card.coming-soon {
+            opacity: 0.7;
+            cursor: default;
+        }
+
+        .resource-card.coming-soon:hover {
+            transform: none;
+        }
+
+        .coming-soon-badge {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #a0a0a0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .resource-card h3 {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .resource-card p {
+            color: #808080;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px dashed rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+        }
+
+        .empty-state p {
+            color: #606060;
+            font-size: 0.95rem;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -305,6 +421,34 @@
                 <div class="stat-item">
                     <h3>360°</h3>
                     <p>Holistic Approach</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="resources">
+            <h2>Resources & Experiments</h2>
+            <p class="section-desc">Explore our research, experiments, and resources as we build Vital Balance.</p>
+
+            <div class="resources-grid">
+                <div class="resource-card coming-soon">
+                    <span class="resource-type experiment">Experiment</span>
+                    <h3>Sleep Pattern Analysis</h3>
+                    <p>Exploring correlations between sleep quality and daily activity levels.</p>
+                    <span class="coming-soon-badge">Coming Soon</span>
+                </div>
+
+                <!-- <div class="resource-card coming-soon">
+                    <span class="resource-type resource">Resource</span>
+                    <h3>Garmin API Integration Guide</h3>
+                    <p>Documentation for connecting with Garmin health data.</p>
+                    <span class="coming-soon-badge">Coming Soon</span>
+                </div> -->
+
+                <div class="resource-card coming-soon">
+                    <span class="resource-type research">Research</span>
+                    <h3>HRV & Stress Correlation Study</h3>
+                    <p>Research into heart rate variability as an indicator of stress levels.</p>
+                    <span class="coming-soon-badge">Coming Soon</span>
                 </div>
             </div>
         </section>
