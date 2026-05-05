@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (fcd0343856, 2026-01-01)"
+   sodipodi:docname="from.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.74386223"
+     inkscape:cx="396.57881"
+     inkscape:cy="561.25984"
+     inkscape:window-width="2560"
+     inkscape:window-height="1043"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="font-size:26.1056px;line-height:20.8;font-family:'Android 101';-inkscape-font-specification:'Android 101, ';white-space:pre;inline-size:89.3343;stroke-width:0.264583"
+       d="m 123.98902,96.897413 h 16.316 v 3.263197 h -13.0528 v 3.2632 h 13.0528 v 3.2632 h -13.0528 v 6.5264 h -3.2632 z m 22.8424,3.263197 v 3.2632 h 9.7896 v -3.2632 z m 3.2632,6.5264 h -3.2632 v 6.5264 h -3.2632 V 96.897413 h 16.316 v 9.789597 h -5.76158 l 5.76158,6.5264 h -4.02801 z m 16.316,-6.5264 v 9.7896 h 9.7896 v -9.7896 z m 13.0528,-3.263197 v 16.315997 h -16.316 V 96.897413 Z m 3.2632,16.315997 V 96.897413 h 22.8424 v 16.315997 h -3.2632 v -13.0528 h -6.5264 v 13.0528 h -3.2632 v -13.0528 h -6.5264 v 13.0528 z"
+       id="text1"
+       transform="translate(-67.936527,-19.562875)"
+       aria-label="FROM" />
+  </g>
+</svg>
