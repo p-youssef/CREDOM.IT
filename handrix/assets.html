@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Handrix · Assets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-outer: #2a2a2a;
+    --bg: #1f1f1f;
+    --bg-elevated: #262626;
+    --bg-hover: #2d2d2d;
+    --line: #333333;
+    --line-bright: #404040;
+    --ink: #ffffff;
+    --ink-muted: #a0a0a0;
+    --ink-dim: #6e6e6e;
+    --accent: #8B7FFF;
+    --accent-hover: #9d92ff;
+    --accent-soft: rgba(139, 127, 255, 0.12);
+    --font: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { height: 100%; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg-outer);
+    color: var(--ink);
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    padding: 24px;
+  }
+
+  .shell {
+    background: var(--bg);
+    border-radius: 8px;
+    min-height: calc(100vh - 48px);
+    overflow: hidden;
+  }
+
+  /* Top nav */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 56px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .brand {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    color: var(--ink);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    font-size: 14px;
+    color: var(--ink-muted);
+    font-weight: 400;
+  }
+
+  .nav-links a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--ink); }
+
+  .nav-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .btn-ghost, .btn-primary {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--line-bright);
+  }
+
+  .btn-ghost:hover { background: var(--bg-hover); }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .btn-primary:hover { background: var(--accent-hover); }
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 96px 24px 72px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-weight: 500;
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 .accent { color: var(--accent); }
+
+  .hero p {
+    color: var(--ink-muted);
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* Asset grid */
+  .assets {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 56px 80px;
+  }
+
+  .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-dim);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .card {
+    position: relative;
+    background: var(--bg-elevated);
+    border: 1px solid var(--line);
+    padding: 28px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: all 0.25s ease;
+    border-radius: 8px;
+    min-height: 180px;
+  }
+
+  .card:hover {
+    background: var(--bg-hover);
+    border-color: var(--line-bright);
+    transform: translateY(-2px);
+  }
+
+  .card:hover .card-arrow {
+    transform: translate(3px, -3px);
+    color: var(--accent);
+  }
+
+  .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .card-num {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink-dim);
+    letter-spacing: 0.05em;
+  }
+
+  .card-arrow {
+    color: var(--ink-dim);
+    transition: transform 0.25s ease, color 0.25s ease;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .card-title {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-top: auto;
+  }
+
+  .card-meta {
+    font-size: 12px;
+    color: var(--ink-muted);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .chip {
+    padding: 3px 8px;
+    border: 1px solid var(--line-bright);
+    border-radius: 4px;
+    color: var(--ink-muted);
+    font-size: 11px;
+  }
+
+  /* Featured card spans full width */
+  .card.featured {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, rgba(139, 127, 255, 0.12), rgba(139, 127, 255, 0.04));
+    border: 1px solid rgba(139, 127, 255, 0.25);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 120px;
+  }
+
+  .card.featured:hover {
+    background: linear-gradient(135deg, rgba(139, 127, 255, 0.18), rgba(139, 127, 255, 0.08));
+    border-color: rgba(139, 127, 255, 0.4);
+  }
+
+  .featured-left {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .card.featured .card-title {
+    font-size: 26px;
+    margin: 0;
+  }
+
+  .pill {
+    font-size: 12px;
+    font-weight: 500;
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 32px 56px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: var(--ink-dim);
+  }
+
+  footer .brand-mini { color: var(--ink); font-weight: 600; }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    body { padding: 12px; }
+    .nav { padding: 20px 24px; flex-wrap: wrap; gap: 16px; }
+    .nav-links { display: none; }
+    .hero { padding: 64px 20px 48px; }
+    .assets { padding: 0 24px 48px; }
+    .grid { grid-template-columns: 1fr; }
+    .card.featured { flex-direction: column; align-items: flex-start; gap: 18px; }
+    footer { padding: 24px; flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+  <div class="shell">
+
+
+    <section class="hero">
+      <h1>Everything <span class="accent">Handrix</span><br/>in one place.</h1>
+      <p>Documentation, design, code & icons — the full asset index for the Handrix team.</p>
+    </section>
+
+    <section class="assets">
+      <div class="section-label">Asset Index</div>
+
+      <div class="grid">
+
+        <a href="http://handrix.app/" class="card featured">
+          <div class="featured-left">
+            <div class="card-meta"><span class="chip">Live</span><span>Production build</span></div>
+            <div class="card-title">Open Handrix App</div>
+          </div>
+          <span class="pill">Launch →</span>
+        </a>
+
+        <a href="https://internal.handrix.app/" class="card">
+          <div class="card-head">
+            <span class="card-num">01 / Internal</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-meta">Internal </div>
+          <div class="card-title">Internal documentation</div>
+        </a>
+
+        <a href="https://developers.handrix.app/" class="card">
+          <div class="card-head">
+            <span class="card-num">02 / Engineering</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-meta">Developers Users</div>
+          <div class="card-title">Developer documentation</div>
+        </a>
+
+        <a href="https://docs.handrix.app/" class="card">
+          <div class="card-head">
+            <span class="card-num">03 / Design</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-meta">Designers users</div>
+          <div class="card-title">Designer documentation</div>
+        </a>
+
+        <a href="https://handrix.app/internal/icons" class="card">
+          <div class="card-head">
+            <span class="card-num">04 / Visual</span>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="card-meta">SVG · Icon library</div>
+          <div class="card-title">Icons</div>
+        </a>
+
+      </div>
+
+    </section>
+
+    <footer>
+      <span class="brand-mini">Handrix</span>
+      <span>Asset Index · 2026</span>
+    </footer>
+
+  </div>
+</body>
+</html>
